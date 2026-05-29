@@ -1,269 +1,477 @@
+# Tubidy Dark Landing Page HTML Code
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Tubidy Music Platform</title>
 
 <style>
 
-body{
-background:#050816;
-font-family:Arial,sans-serif;
-color:white;
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0b0b0b;
+font-family:Arial,sans-serif;
+color:white;
 line-height:1.7;
 }
 
 .container{
 width:90%;
-max-width:1200px;
+max-width:1250px;
 margin:auto;
-padding:60px 0;
+padding:50px 0;
 }
 
-.top-line{
+/* HERO SECTION */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+margin-bottom:60px;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.badge{
 display:inline-block;
-background:#111827;
-border-left:4px solid #4FC3F7;
-padding:10px 15px;
-margin-bottom:20px;
-color:#4FC3F7;
-border-radius:6px;
+padding:12px 20px;
+border:1px solid #ffd400;
+border-radius:50px;
+margin-bottom:25px;
+color:#ffd400;
+font-weight:bold;
+background:#111;
 }
 
-h1{
-font-size:50px;
-color:#FFD600;
-margin-bottom:20px;
+.hero h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:25px;
+font-weight:800;
 }
 
-p{
-color:#d1d5db;
-font-size:18px;
+.hero h1 span{
+color:#ffd400;
 }
 
-.hero-img{
-width:100%;
-max-width:700px;
-border-radius:15px;
-margin:40px 0;
+.hero p{
+font-size:20px;
+color:#ddd;
+max-width:650px;
+margin-bottom:30px;
 }
 
-.section-title{
-font-size:38px;
-margin:60px 0 30px;
-color:#FFD600;
+.hero-image{
+flex:1;
+min-width:320px;
 text-align:center;
 }
 
-.genres{
+.hero-image img{
+width:100%;
+max-width:500px;
+}
+
+/* FEATURE ICON BOXES */
+
+.quick-features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 margin-bottom:70px;
 }
 
-.genre-box{
-background:#111827;
-padding:18px;
-border-left:5px solid #4FC3F7;
-border-radius:10px;
+.quick-box{
+background:#121212;
+padding:25px;
+border-radius:16px;
+border:1px solid #222;
+}
+
+.quick-box h3{
+color:#ffd400;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.quick-box p{
+color:#ccc;
+font-size:16px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
 text-align:center;
+font-size:45px;
+margin-bottom:25px;
+color:#ffd400;
+font-weight:800;
 }
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-margin-top:40px;
+.section-desc{
+text-align:center;
+max-width:900px;
+margin:auto;
+margin-bottom:60px;
+font-size:20px;
+color:#ddd;
 }
 
-.feature-card{
-background:#111827;
-padding:20px;
-border-radius:15px;
+/* WHAT IS TUBIDY */
+
+.about-box{
+display:flex;
+align-items:center;
+gap:40px;
+background:#111;
+padding:35px;
+border-radius:25px;
+margin-bottom:80px;
+flex-wrap:wrap;
 }
 
-.feature-card img{
+.about-image{
+flex:1;
+min-width:300px;
+}
+
+.about-image img{
 width:100%;
-height:220px;
-object-fit:cover;
-border-radius:12px;
-margin-bottom:15px;
+max-width:450px;
 }
 
-.feature-card h3{
-color:#FFD600;
+.about-content{
+flex:1;
+min-width:300px;
+}
+
+.about-content h2{
+font-size:50px;
+margin-bottom:20px;
+color:#ffd400;
+}
+
+.about-content p{
+font-size:19px;
+color:#ddd;
+margin-bottom:20px;
+}
+
+.about-content a{
+color:#ffd400;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FEATURES */
+
+.feature-row{
+display:flex;
+align-items:center;
+gap:30px;
+background:#111;
+padding:25px;
+border-radius:20px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.feature-row img{
+width:100%;
+max-width:350px;
+border-radius:16px;
+}
+
+.feature-text{
+flex:1;
+min-width:300px;
+}
+
+.feature-text h3{
+font-size:35px;
 margin-bottom:15px;
+color:#ffd400;
+}
+
+.feature-text p{
+font-size:18px;
+color:#ddd;
+}
+
+.feature-text a{
+color:#ffd400;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FAQ */
+
+.faq{
+margin-top:80px;
 }
 
 .faq-item{
-background:#111827;
-padding:20px;
+background:#111;
+padding:22px;
+border-radius:14px;
 margin-bottom:20px;
-border-radius:12px;
 }
 
 .faq-item h3{
-color:#4FC3F7;
+color:#ffd400;
+margin-bottom:10px;
+font-size:24px;
 }
 
-.cta{
-text-align:center;
-background:#111827;
-padding:60px 20px;
-border-radius:20px;
-margin-top:70px;
+.faq-item p{
+color:#ddd;
+font-size:18px;
 }
 
-.cta-btn{
-display:inline-block;
-background:#FFD600;
-color:black;
-padding:15px 35px;
-text-decoration:none;
-font-weight:bold;
-border-radius:8px;
-margin-top:20px;
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:48px;
+}
+
+.about-content h2{
+font-size:38px;
+}
+
+.feature-text h3{
+font-size:28px;
+}
+
+.section-title{
+font-size:38px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="top-line">
-Trending MP3 Music & Entertainment Platform
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<div class="badge">
+Your Gateway to Endless Music
 </div>
 
 <h1>
-Explore Unlimited Music & Video Streaming
+Explore Unlimited <span>Music & Video Streaming</span>
 </h1>
 
 <p>
-Tubidy is a modern online platform that allows users to search, stream, and discover MP3 music and MP4 videos easily across mobile devices and browsers.
+A modern platform that allows users to search, stream, and discover MP3 music and MP4 videos easily. Explore trending songs, new artists, and enjoy high-quality entertainment across all your devices.
 </p>
-
-<img class="hero-img" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
-
-<h2 class="section-title">
-Moods & Genres
-</h2>
-
-<div class="genres">
-
-<div class="genre-box">Amapiano</div>
-<div class="genre-box">Hip Hop</div>
-<div class="genre-box">African</div>
-<div class="genre-box">Bollywood</div>
-<div class="genre-box">Latin</div>
-<div class="genre-box">Pop Music</div>
-<div class="genre-box">Arabic</div>
-<div class="genre-box">Chill</div>
 
 </div>
 
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Music Headphones">
+</div>
+
+</section>
+
+<!-- QUICK FEATURES -->
+
+<div class="quick-features">
+
+<div class="quick-box">
+<h3>Fast & Secure</h3>
+<p>
+Quick access to trending music and entertainment content.
+</p>
+</div>
+
+<div class="quick-box">
+<h3>HD Quality</h3>
+<p>
+High-quality MP3 and MP4 streaming experiences.
+</p>
+</div>
+
+<div class="quick-box">
+<h3>Mobile Friendly</h3>
+<p>
+Optimized browsing experience for smartphones and tablets.
+</p>
+</div>
+
+<div class="quick-box">
+<h3>Global Access</h3>
+<p>
+Discover music from multiple genres around the world.
+</p>
+</div>
+
+</div>
+
+<!-- OVERVIEW -->
+
 <h2 class="section-title">
-About Music Streaming
+Simple Overview
+</h2>
+
+<p class="section-desc">
+Our platform makes it easy to explore, stream, and discover your favorite MP3 music and MP4 videos. Whether you love trending hits, classic songs, or new releases, you can enjoy smooth entertainment experiences across all devices.
+</p>
+
+<!-- WHAT IS TUBIDY -->
+
+<div class="about-box">
+
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop" alt="What is Tubidy">
+</div>
+
+<div class="about-content">
+
+<h2>
+What is Tubidy?
 </h2>
 
 <p>
-Music streaming platforms continue to transform how users discover and enjoy entertainment content online. Responsive music websites help users access MP3 songs, streaming media, and downloadable content quickly across smartphones and mobile devices.
+<a href="https://www-tubidy.za.com/">Tubidy</a> is an online music and video platform that allows users to search, stream, and discover MP3 music and MP4 videos easily. It has become popular among users who want quick access to trending songs, music videos, and entertainment content directly from mobile or desktop devices.
 </p>
+
+<p>
+The platform is designed to be lightweight, fast, and user-friendly, making it easy for users to discover new music genres, explore trending tracks, and enjoy high-quality entertainment experiences online.
+</p>
+
+<p>
+Read more about streaming technology trends in this article:
+<a href="https://peruactivo.com/read-blog/25125_why-tubidy-is-trending-in-mobile-entertainment-technology.html">Why Tubidy is Trending in Mobile Entertainment Technology</a>
+</p>
+
+</div>
+
+</div>
+
+<!-- PLATFORM FEATURES -->
 
 <h2 class="section-title">
 Platform Features
 </h2>
 
-<div class="features">
+<div class="feature-row">
 
-<div class="feature-card">
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop" alt="Music Streaming">
 
-<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop">
+<div class="feature-text">
 
-<h3>Fast MP3 Downloads</h3>
-
-<p>
-Users can quickly access music resources using fast-loading streaming platforms optimized for mobile entertainment experiences.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop">
-
-<h3>Mobile Streaming</h3>
+<h3>
+Unlimited Music Streaming
+</h3>
 
 <p>
-Modern entertainment websites support Android devices and responsive mobile browsing for better streaming accessibility.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop">
-
-<h3>HD MP4 Videos</h3>
-
-<p>
-Entertainment platforms now support MP4 browsing and high-quality streaming experiences across devices.
+Access millions of MP3 songs online and enjoy unlimited streaming experiences across multiple music genres including Hip Hop, Amapiano, Pop, Latin, and African music. Users searching for responsive entertainment experiences often explore <a href="https://www-tubidy.za.com/">Tubidy</a> for lightweight browsing and mobile-friendly music discovery.
 </p>
 
 </div>
 
 </div>
+
+<div class="feature-row">
+
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop" alt="Video Streaming">
+
+<div class="feature-text">
+
+<h3>
+High Quality Video Streaming
+</h3>
+
+<p>
+Watch MP4 videos in high definition with smooth playback experiences across smartphones, tablets, and desktop devices. Entertainment platforms now support faster browsing and better media accessibility for users searching for trending video content online.
+</p>
+
+</div>
+
+</div>
+
+<div class="feature-row">
+
+<img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=1200&auto=format&fit=crop" alt="MP3 Downloads">
+
+<div class="feature-text">
+
+<h3>
+Easy MP3 Discovery
+</h3>
+
+<p>
+Modern streaming websites help users discover trending songs, artist collections, and mobile entertainment resources quickly. Fast-loading platforms continue to grow because of their responsive interfaces and lightweight browsing experiences.
+</p>
+
+</div>
+
+</div>
+
+<!-- FAQ -->
+
+<section class="faq">
 
 <h2 class="section-title">
 Frequently Asked Questions
 </h2>
 
 <div class="faq-item">
-<h3>How do music platforms work?</h3>
+<h3>
+How does the music streaming platform work?
+</h3>
 <p>
-Users can browse and stream music online using mobile-friendly entertainment platforms.
+Users can search and explore music content online using responsive entertainment platforms optimized for mobile devices.
 </p>
 </div>
 
 <div class="faq-item">
-<h3>Can users stream music on smartphones?</h3>
+<h3>
+Can users stream music on smartphones?
+</h3>
 <p>
-Yes, responsive streaming platforms support Android and mobile browsing experiences.
+Yes, the platform supports Android smartphones, tablets, laptops, and desktop browsing experiences.
 </p>
 </div>
 
 <div class="faq-item">
-<h3>What genres are available?</h3>
+<h3>
+What music genres are available?
+</h3>
 <p>
-Popular genres include Amapiano, Hip Hop, Pop, African music, Bollywood, and more.
+Popular genres include Hip Hop, Amapiano, Pop, Bollywood, Latin music, African music, and more.
 </p>
 </div>
 
-<div class="cta">
-
-<h2>
-Start Exploring Trending Music
-</h2>
-
-<p>
-Discover MP3 music downloads, online streaming, and entertainment resources today.
-</p>
-
-<a href="https://www-tubidy.za.com/" class="cta-btn">
-Visit Platform
-</a>
-
-</div>
+</section>
 
 </div>
 
 </body>
 </html>
+```
